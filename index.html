@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Shop Acc Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>SHOP ACC DEMO</h1>
+
+  <!-- Đăng ký -->
+  <div class="box">
+    <h2>Đăng ký</h2>
+    <input id="reg_user" placeholder="Username">
+    <input id="reg_pass" type="password" placeholder="Password">
+    <button onclick="register()">Đăng ký</button>
+  </div>
+
+  <!-- Đăng nhập -->
+  <div class="box">
+    <h2>Đăng nhập</h2>
+    <input id="log_user" placeholder="Username">
+    <input id="log_pass" type="password" placeholder="Password">
+    <button onclick="login()">Đăng nhập</button>
+  </div>
+
+  <!-- Mua acc -->
+  <div class="box">
+    <h2>Mua acc mù 5k</h2>
+    <button onclick="buy()">Mua acc</button>
+  </div>
+
+  <!-- Kết quả -->
+  <pre id="result"></pre>
+
+  <script src="app.js"></script>
+</body>
+</html>

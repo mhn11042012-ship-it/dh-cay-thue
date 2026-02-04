@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>DH Cày Thuê</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header id="header" style="display:none;">
+  <div class="logo">DH CÀY THUÊ</div>
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+</header>
+
+<!-- ===== SIDE MENU ===== -->
+<div class="side-menu" id="sideMenu">
+  <h3>Tài khoản</h3>
+  <p><b>ID:</b> <span id="uid"></span></p>
+  <p><b>Số dư:</b> <span id="balance">0</span> đ</p>
+  <hr>
+  <p>📜 Lịch sử mua acc</p>
+  <p>💳 Lịch sử nạp tiền</p>
+  <hr>
+  <p class="logout" onclick="logout()">Đăng xuất</p>
+</div>
+
+<!-- ===== LOGIN ===== -->
+<section class="box" id="loginBox">
+  <h2>Đăng nhập</h2>
+  <input id="loginUser" placeholder="Tài khoản">
+  <input id="loginPass" type="password" placeholder="Mật khẩu">
+  <button onclick="login()">Đăng nhập</button>
+  <p class="msg" id="loginStatus"></p>
+
+  <p class="switch">
+    Chưa có tài khoản?
+    <span onclick="showRegister()">Đăng ký</span>
+  </p>
+</section>
+
+<!-- ===== REGISTER ===== -->
+<section class="box" id="registerBox" style="display:none;">
+  <h2>Đăng ký</h2>
+  <input id="regUser" placeholder="Tài khoản">
+  <input id="regPass" type="password" placeholder="Mật khẩu">
+  <button onclick="register()">Tạo tài khoản</button>
+  <p class="msg" id="registerStatus"></p>
+
+  <p class="switch">
+    Đã có tài khoản?
+    <span onclick="showLogin()">Đăng nhập</span>
+  </p>
+</section>
+
+<!-- ===== SHOP ===== -->
+<section id="shopBox" style="display:none;">
+  <h2>Mua acc</h2>
+
+  <div class="product">
+    <h3>🎒 Túi mù 5K</h3>
+    <p>Acc random Blox Fruits</p>
+    <button onclick="buyAcc()">Mua ngay (5.000đ)</button>
+  </div>
+</section>
+
+<!-- KẾT QUẢ MUA ACC -->
+<section id="buyResult" class="box" style="display:none;">
+  <h2>🎉 Mua acc thành công</h2>
+
+  <p>
+    <b>Tài khoản:</b>
+    <span id="acc-user"></span>
+    <button onclick="copyText('acc-user')">📋</button>
+  </p>
+
+  <p>
+    <b>Mật khẩu:</b>
+    <span id="acc-pass"></span>
+    <button onclick="copyText('acc-pass')">📋</button>
+  </p>
+</section>
+
+<script>
+function copyText(id) {
+    const el = document.getElementById(id);
+    if (!el) {
+        alert("❌ Không tìm thấy nội dung để sao chép");
+        return;
+    }
+
+    const text = el.innerText || el.textContent;
+
+    // Trình duyệt mới
+    if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(() => {
+            alert("✅ Đã sao chép: " + text);
+        }).catch(() => {
+            fallbackCopy(text);
+        });
+    } else {
+        fallbackCopy(text);
+    }
+}
+
+// Fallback cho Android / WebView / trình duyệt cũ
+function fallbackCopy(text) {
+    const temp = document.createElement("textarea");
+    temp.value = text;
+    document.body.appendChild(temp);
+    temp.select();
+    document.execCommand("copy");
+    document.body.removeChild(temp);
+    alert("✅ Đã sao chép: " + text);
+}
+</script>
+
+<script src="app.js"></script>
+</body>
+</html>

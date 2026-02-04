@@ -1,0 +1,39 @@
+[
+  {
+    "username": "test",
+    "password": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+    "balance": 0
+  },
+  {
+    "username": "testing",
+    "password": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+    "balance": 0
+  },
+  {
+    "username": "verstappen",
+    "password": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+    "balance": 0
+  },
+  {
+    "username": "baxlocey9170",
+    "password": "Wz^4#Lr9!Xp@2Vm&Tq$C87n",
+    "balance": 5000
+  },
+  {
+    "username": "conggamoez",
+    "password": "17cd9ec7e533145da6ffb516b13a3c0f8b000dd22f1efc56c39e56bab13de851",
+    "balance": 5000
+  },
+  {
+    "id": 1770183441897,
+    "username": "test01",
+    "password": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92",
+    "balance": 0
+  },
+  {
+    "id": 1770183797064,
+    "username": "haithu3",
+    "password": "e2dd3066461d972a926f6fc0fd76f5b4ff32193193069ff8915e56ae90f238af",
+    "balance": 485000
+  }
+]
